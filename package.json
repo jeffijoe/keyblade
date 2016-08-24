@@ -1,0 +1,54 @@
+{
+  "name": "keyblade",
+  "version": "0.0.1",
+  "description": "Fail fast when accessing undefined properties on objects.",
+  "main": "lib/keyblade.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.spec.js --require test/index.js",
+    "test-watch": "npm run test -- --watch",
+    "lint": "esw lib/ test/",
+    "lint-watch": "npm run lint -- --watch",
+    "cover": "nyc --reporter=lcov --reporter=text npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "do-publish": "npm run lint && npm run cover && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffijoe/keyblade.git"
+  },
+  "keywords": [
+    "proxy",
+    "fail-fast",
+    "guard",
+    "safety",
+    "assert"
+  ],
+  "author": "Jeff Hansen <jeff@jeffijoe.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffijoe/keyblade/issues"
+  },
+  "homepage": "https://github.com/jeffijoe/keyblade#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.3.1",
+    "eslint-config-standard": "^6.0.0-beta.3",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "eslint-watch": "^2.1.14",
+    "mocha": "^3.0.2",
+    "nyc": "^8.1.0",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {},
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ]
+  }
+}
