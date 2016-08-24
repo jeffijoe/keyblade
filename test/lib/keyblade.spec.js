@@ -78,6 +78,17 @@ describe('keyblade', function () {
     expect(safe.toString()).to.equal('yep')
   })
 
+  it('supports typeof on the error', function () {
+    try {
+      keyblade({ }).nope()
+    } catch (err) {
+      expect(err instanceof UndefinedKeyError).to.be.true
+      return
+    }
+
+    expect.fail('should have thrown')
+  })
+
   describe('when using classes', function () {
     it('supports them', function () {
       class Test {

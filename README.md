@@ -23,7 +23,7 @@ _Requires Node v6 or above._
 # Usage
 
 ```js
-const { keyblade } = require('keyblade')
+const { keyblade, UndefinedKeyError } = require('keyblade')
 
 // Object to protect
 const unsafe = {
@@ -43,6 +43,8 @@ console.log(safe.hello)
 console.log(safe.goodbye)
 // < UndefinedKeyError: The key 'goodbye' does not exist on the object.
 ```
+
+**Note**: to ensure interoperability with utilities that use Symbols, checking them has been disabled. This means using `util.inspect` and `JSON.stringify` works without issues. I don't know why you would need to stringify a protected object but... you can!
 
 # Why do I <strike>need</strike> deserve it?
 
