@@ -1,6 +1,6 @@
 {
   "name": "keyblade",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Fail fast when accessing undefined properties on objects.",
   "main": "lib/keyblade.js",
   "engines": {
