@@ -1,11 +1,14 @@
 # keyblade
 
-[![npm](https://img.shields.io/npm/v/keyblade.svg?maxAge=2592000)]()
-[![Dependency Status](https://david-dm.org/jeffijoe/keyblade.svg)](https://david-dm.org/jeffijoe/keyblade)
-[![devDependency Status](https://david-dm.org/jeffijoe/keyblade/dev-status.svg)](https://david-dm.org/jeffijoe/keyblade#info=devDependencies)
-[![Build Status](https://travis-ci.org/jeffijoe/keyblade.svg?branch=master)](https://travis-ci.org/jeffijoe/keyblade)
-[![Coverage Status](https://coveralls.io/repos/github/jeffijoe/keyblade/badge.svg?branch=master)](https://coveralls.io/github/jeffijoe/keyblade?branch=master)
-[![Code Climate](https://codeclimate.com/github/jeffijoe/keyblade/badges/gpa.svg)](https://codeclimate.com/github/jeffijoe/keyblade)
+[![npm](https://img.shields.io/npm/v/keyblade.svg?maxAge=1000)](https://www.npmjs.com/package/keyblade)
+[![dependency Status](https://img.shields.io/david/jeffijoe/keyblade.svg?maxAge=1000)](https://david-dm.org/jeffijoe/keyblade)
+[![devDependency Status](https://img.shields.io/david/dev/jeffijoe/keyblade.svg?maxAge=1000)](https://david-dm.org/jeffijoe/keyblade)
+[![Build Status](https://img.shields.io/travis/jeffijoe/keyblade.svg?maxAge=1000)](https://travis-ci.org/jeffijoe/keyblade)
+[![Coveralls](https://img.shields.io/coveralls/jeffijoe/keyblade.svg?maxAge=1000)](https://coveralls.io/github/jeffijoe/keyblade)
+[![Code Climate](https://img.shields.io/codeclimate/github/jeffijoe/keyblade.svg?maxAge=1000)](https://codeclimate.com/github/jeffijoe/keyblade)
+[![npm](https://img.shields.io/npm/dt/keyblade.svg?maxAge=1000)](https://www.npmjs.com/package/keyblade)
+[![npm](https://img.shields.io/npm/l/keyblade.svg?maxAge=1000)](https://github.com/jeffijoe/keyblade/blob/master/LICENSE.md)
+[![node](https://img.shields.io/node/v/keyblade.svg?maxAge=1000)](https://www.npmjs.com/package/keyblade)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Fail fast when accessing undefined properties on objects.
