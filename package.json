@@ -7,7 +7,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "test": "mocha test/**/*.spec.js --require test/index.js",
+    "test": "mocha --compilers es6:babel-register --require test/index.js test/**/*.spec.*",
     "test-watch": "npm run test -- --watch",
     "lint": "esw lib/ test/",
     "lint-watch": "npm run lint -- --watch",
@@ -33,17 +33,22 @@
   },
   "homepage": "https://github.com/jeffijoe/keyblade#readme",
   "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "babel-register": "^6.14.0",
     "chai": "^3.5.0",
     "coveralls": "^2.11.12",
-    "eslint": "^3.3.1",
-    "eslint-config-standard": "^6.0.0-beta.3",
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
     "eslint-watch": "^2.1.14",
     "mocha": "^3.0.2",
     "nyc": "^8.1.0",
     "sinon": "^1.17.5",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "typescript": "^1.8.10",
+    "typescript-register": "^1.1.0"
   },
   "dependencies": {},
   "nyc": {
