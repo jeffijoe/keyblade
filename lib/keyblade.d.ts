@@ -13,7 +13,13 @@ export interface IKeybladeOpts {
    * If specified, will be invoked with the key of the non-existing variable to generate a message.
    * @type {[type]}
    */
-  message?: (key: string) => string
+  message?: (key: string) => string,
+
+  /**
+   * Additional fields to ignore.
+   * @type {string[]}
+   */
+  ignore: string[]
 }
 
 /**

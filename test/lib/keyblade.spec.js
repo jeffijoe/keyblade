@@ -89,6 +89,22 @@ describe('keyblade', function () {
     expect.fail('should have thrown')
   })
 
+  describe('additional ignore', function () {
+    it('uses additional ignore option', function () {
+      expect(() => keyblade({}).heh).to.throw(UndefinedKeyError)
+      expect(keyblade({}, { ignore: ['heh'] }).heh).to.be.undefined
+    })
+
+    it('does not screw up when passing non-array values as ignore', function () {
+      expect(() => keyblade({}, { ignore: undefined }).heh).to.throw(UndefinedKeyError)
+      expect(() => keyblade({}, { ignore: null }).heh).to.throw(UndefinedKeyError)
+      expect(() => keyblade({}, { ignore: 0 }).heh).to.throw(UndefinedKeyError)
+      expect(() => keyblade({}, { ignore: 1 }).heh).to.throw(UndefinedKeyError)
+      expect(() => keyblade({}, { ignore: 1337 }).heh).to.throw(UndefinedKeyError)
+      expect(() => keyblade({}, { ignore: 'hah' }).heh).to.throw(UndefinedKeyError)
+    })
+  })
+
   describe('when using classes', function () {
     it('supports them', function () {
       class Test {
