@@ -1,6 +1,6 @@
 # keyblade
 
-[![npm version](https://badge.fury.io/js/YOUR-NPM-MODULE.svg)](https://badge.fury.io/js/keyblade)
+[![npm](https://img.shields.io/npm/v/keyblade.svg?maxAge=2592000)]()
 [![Dependency Status](https://david-dm.org/jeffijoe/keyblade.svg)](https://david-dm.org/jeffijoe/keyblade)
 [![devDependency Status](https://david-dm.org/jeffijoe/keyblade/dev-status.svg)](https://david-dm.org/jeffijoe/keyblade#info=devDependencies)
 [![Build Status](https://travis-ci.org/jeffijoe/keyblade.svg?branch=master)](https://travis-ci.org/jeffijoe/keyblade)
