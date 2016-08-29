@@ -10,7 +10,7 @@ const { UndefinedKeyError } = require('../../lib/keyblade')
 describe('typescript', function () {
   it('supports typescript import-export', function () {
     expect(env.TEST).to.equal(true)
-    expect(() => env.LOL).to.throw(UndefinedKeyError)
+    expect(() => env['LOL']).to.throw(UndefinedKeyError)
   })
 
   it('supports commonjs', function () {

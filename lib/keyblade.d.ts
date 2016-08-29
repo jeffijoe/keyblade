@@ -30,8 +30,8 @@ export class UndefinedKeyError extends Error {}
 /**
  * Protects the given object by wrapping it in a proxy.
  *
- * @param  {IEnvironment}  obj
+ * @param  {T}  obj
  * @param  {IKeybladeOpts} opts
- * @return {IEnvironment}
+ * @return {T}
  */
-export function keyblade(obj: IEnvironment, opts?: IKeybladeOpts): IEnvironment
+export function keyblade<T extends IEnvironment>(obj: T, opts?: IKeybladeOpts): T
