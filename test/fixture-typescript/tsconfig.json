@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs"
+  },
+  "files": [
+    './',
+    '../../lib'
+  ]
+}
