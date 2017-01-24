@@ -166,6 +166,31 @@ describe('keyblade', function () {
     })
   })
 
+  describe('opts.logBeforeThrow', function () {
+    it('is invoked if it is a function', function () {
+      let called = 0
+      const safe = keyblade({}, {
+        logBeforeThrow: () => called++
+      })
+      expect(() => safe.lol).to.throw(UndefinedKeyError)
+      expect(called).to.equal(1)
+    })
+
+    it('can be false', function () {
+      const safe = keyblade({}, {
+        logBeforeThrow: false
+      })
+      expect(() => safe.lol).to.throw(UndefinedKeyError)
+    })
+
+    it('can be true', function () {
+      const safe = keyblade({}, {
+        logBeforeThrow: true
+      })
+      expect(() => safe.lol).to.throw(UndefinedKeyError)
+    })
+  })
+
   describe('inspect', function () {
     it('uses the inspect method defined on the object', function () {
       const safe = keyblade({
@@ -180,7 +205,7 @@ describe('keyblade', function () {
         hello: () => 42
       })
 
-      expect(inspect(safe)).to.equal('{ hello: [Function] }')
+      expect(inspect(safe)).to.equal('{ hello: [Function: hello] }')
     })
   })
 })
