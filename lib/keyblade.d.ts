@@ -6,20 +6,29 @@ export interface IEnvironment {
 }
 
 /**
+ * Function signature for logging before throwing.
+ */
+export type LogFunc = (message: string, key: string) => void
+
+/**
  * Options for Keyblade.
  */
 export interface IKeybladeOpts {
   /**
    * If specified, will be invoked with the key of the non-existing variable to generate a message.
-   * @type {[type]}
    */
   message?: (key: string) => string,
 
   /**
    * Additional fields to ignore.
-   * @type {string[]}
    */
   ignore: string[]
+
+  /**
+   * If specified, and is a function, is invoked before throwing.
+   * If specified, and is truthy, `console.error` before throwing.
+   */
+  logBeforeThrow?: boolean | LogFunc
 }
 
 /**

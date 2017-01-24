@@ -90,6 +90,24 @@ const cert = someModuleThatNeedsACertFile(env.CERT_FILE_PATH)
 // < UndefinedKeyError: Environment variable CERT_FILE_PATH is not set.
 ```
 
+If you are not a fan of the `console.error` happening before throwing, you can either customize it:
+
+```js
+const env = keyblade(process.env, {
+  message: (key) => `Environment variable ${key} is not set.`,
+  logBeforeThrow: (message, key) => mylogger.error(message, 'key was ' + key)
+})
+```
+
+Or disable it entirely.
+
+```js
+const env = keyblade(process.env, {
+  message: (key) => `Environment variable ${key} is not set.`,
+  logBeforeThrow: false
+})
+```
+
 # Contributing
 
 ## `npm run` scripts
